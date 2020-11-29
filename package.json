@@ -6,13 +6,13 @@
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/axelfahy/jupyterlab-vim",
+  "homepage": "https://github.com/moongi-simon-hong/jupyterlab-vim",
   "bugs": {
-    "url": "https://github.com/axelfahy/jupyterlab-vim/issues"
+    "url": "https://github.com/moongi-simon-hong/jupyterlab-vim/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/axelfahy/jupyterlab-vim.git"
+    "url": "https://github.com/moongi-simon-hong/jupyterlab-vim.git"
   },
   "keywords": [
     "extension",

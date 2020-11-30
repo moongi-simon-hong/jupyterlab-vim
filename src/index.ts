@@ -183,7 +183,7 @@ class VimCell {
             lvim.defineAction('splitCell', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:split-cell-at-cursor');
             });
-            lvim.mapCommand('-', 'action', 'splitCell', {}, {extra: 'normal'});
+            // lvim.mapCommand('-', 'action', 'splitCell', {}, {extra: 'normal'});
             // space bar in mormal mode
             (CodeMirror as any).Vim.handleKey(editor.editor, '<Space>');
             lvim.defineAction('enterCommandMode', (cm: any, actionArgs: any) => {

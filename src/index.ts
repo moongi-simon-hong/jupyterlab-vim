@@ -494,11 +494,11 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
 //             keys: ['Ctrl I'],
 //             command: 'enter-insert-mode'
 //         });
-//         commands.addKeyBinding({
-//             selector: '.jp-Notebook.jp-mod-editMode',
-//             keys: ['Ctrl Enter'],
-//             command: 'run-cell-and-edit'
-//         });
+        commands.addKeyBinding({
+            selector: '.jp-Notebook.jp-mod-editMode',
+            keys: ['Enter'],
+            command: 'run-cell-and-edit'
+        });
 //         commands.addKeyBinding({
 //             selector: '.jp-Notebook.jp-mod-editMode',
 //             keys: ['Shift Enter'],

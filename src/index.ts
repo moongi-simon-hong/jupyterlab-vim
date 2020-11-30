@@ -184,12 +184,23 @@ class VimCell {
                 commands.execute('notebook:split-cell-at-cursor');
             });
             // lvim.mapCommand('-', 'action', 'splitCell', {}, {extra: 'normal'});
-            // space bar in mormal mode
+            // space bar in normal mode
             (CodeMirror as any).Vim.handleKey(editor.editor, '<Space>');
             lvim.defineAction('enterCommandMode', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:enter-command-mode');
             });
             lvim.mapCommand('<Space>', 'action', 'enterCommandMode', {}, {extra: 'normal'});
+            // enter to run in normal mode
+            (CodeMirror as any).Vim.handleKey(editor.editor, '<CR>');
+            // lvim.defineAction('normal:run-cell-and-edit', (cm: any, actionArgs: any) => {
+            //     commands.execute('notebook:run-cell');
+            //     commands.execute('notebook:enter-edit-mode')
+            // });
+            lvim.defineAction('normal:run-cell-and-edit', (cm: any, actionArgs: any) => {
+                commands.execute('run-cell-and-edit')
+            });
+            lvim.mapCommand('<CR>', 'action', 'normal:run-cell-and-edit', {}, {extra: 'normal'});
+
         }
     }
 
@@ -494,11 +505,11 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
 //             keys: ['Ctrl I'],
 //             command: 'enter-insert-mode'
 //         });
-        commands.addKeyBinding({
-            selector: '.jp-Notebook.jp-mod-editMode',
-            keys: ['Enter'],
-            command: 'run-cell-and-edit'
-        });
+        // commands.addKeyBinding({
+        //     selector: '.jp-Notebook.jp-mod-editMode',
+        //     keys: ['Enter'],
+        //     command: 'run-cell-and-edit'
+        // });
 //         commands.addKeyBinding({
 //             selector: '.jp-Notebook.jp-mod-editMode',
 //             keys: ['Shift Enter'],

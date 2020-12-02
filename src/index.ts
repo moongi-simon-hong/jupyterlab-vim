@@ -435,7 +435,7 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         //     keys: ['Ctrl I'],
         //     command: 'enter-insert-mode'
         // });
-        run cell commands remain in cell
+        //// run cell commands remain in cell
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus', // command mode 
             keys: ['Enter'],

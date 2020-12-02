@@ -497,11 +497,6 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             keys: ['D'],
             command: 'notebook:delete-cell'
         });
-        // commands.addKeyBinding({
-        //     selector: '.jp-Notebook:focus',
-        //     keys: ['D', 'D'],
-        //     command: ''
-        // });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
             keys: ['Shift P'],

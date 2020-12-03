@@ -603,6 +603,16 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             command: 'application:toggle-mode'
         });
         commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt R'],
+            command: 'docmanager:reload'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt P'],
+            command: 'jupytext:auto:percent'
+        });
+        commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
             keys: ['B'],
             command: 'application:toggle-presentation-mode'
@@ -621,6 +631,11 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             selector: '.jp-Notebook:focus',
             keys: ['Z'],
             command: ''
+        });
+        commands.addKeyBinding({
+            selector: '.jp-Notebook:focus',
+            keys: ['N'],
+            command: 'notebook:toggle-all-cell-line-numbers'
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',

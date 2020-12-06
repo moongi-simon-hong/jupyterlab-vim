@@ -602,21 +602,6 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             command: 'application:close'
         });
         commands.addKeyBinding({
-            selector: 'body',
-            keys: ['Alt T'],
-            command: 'application:toggle-mode'
-        });
-        commands.addKeyBinding({
-            selector: 'body',
-            keys: ['Alt R'],
-            command: 'docmanager:reload'
-        });
-        commands.addKeyBinding({
-            selector: 'body',
-            keys: ['Alt P'],
-            command: 'jupytext:auto:percent'
-        });
-        commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
             keys: ['B'],
             command: 'application:toggle-presentation-mode'
@@ -655,6 +640,26 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             selector: '.jp-Notebook:focus',
             keys: ['E', 'B'],
             command: 'notebook:run-all-below'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt T'],
+            command: 'application:toggle-mode'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt R'],
+            command: 'docmanager:reload'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt P'],
+            command: 'jupytext:auto:percent'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Ctrl `'],
+            command: 'terminal:create-new'
         });
         // key binding end
         // tslint:disable:no-unused-expression

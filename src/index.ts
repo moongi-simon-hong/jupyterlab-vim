@@ -172,20 +172,23 @@ class VimCell {
             //     { context: 'normal' }
             // );
 
+            // move cell up down
             lvim.defineAction('moveCellDown', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:move-cell-down');
             });
             lvim.defineAction('moveCellUp', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:move-cell-up');
             });
-            lvim.mapCommand('<C-e>', 'action', 'moveCellDown', {}, {extra: 'normal'});
-            lvim.mapCommand('<C-y>', 'action', 'moveCellUp', {}, {extra: 'normal'});
+            // lvim.mapCommand('<C-e>', 'action', 'moveCellDown', {}, {extra: 'normal'});
+            // lvim.mapCommand('<C-y>', 'action', 'moveCellUp', {}, {extra: 'normal'});
+            
+            // split cell by backslash
             lvim.defineAction('splitCell', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:split-cell-at-cursor');
             });
-            // moongi binding
             lvim.mapCommand('\\', 'action', 'splitCell', {}, {extra: 'normal'});
-
+            // enter command mode from normal mode by space bar
+            (CodeMirror as any).Vim.handleKey(editor.editor, '<Space>');
             lvim.defineAction('normal:enter-command-mode', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:enter-command-mode');
             });
@@ -196,6 +199,7 @@ class VimCell {
             // });
             // lvim.mapCommand('<CR>', 'action', 'normal:run-cell', {}, {extra: 'normal'});
 
+            // run cell and remain in normal mode by enter(carriage return)
             lvim.defineAction('normal:run-cell', (cm: any, actionArgs: any) => {
                 commands.execute('notebook:run-cell'); // go to command mode
                 commands.execute('notebook:enter-edit-mode'); // go to edit mode

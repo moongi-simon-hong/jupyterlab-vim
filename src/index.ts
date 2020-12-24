@@ -614,7 +614,7 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
             keys: ['V'],
-            command: ''
+            command: 'notebook:create-output-view'
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',

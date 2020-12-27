@@ -593,17 +593,7 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['W'],
-            command: 'docmanager:save'
-        });
-        commands.addKeyBinding({
-            selector: '.jp-Notebook:focus',
-            keys: ['Q'],
-            command: 'application:close'
-        });
-        commands.addKeyBinding({
-            selector: '.jp-Notebook:focus',
-            keys: ['B'],
+            keys: ['T'],
             command: 'application:toggle-presentation-mode'
         });
         commands.addKeyBinding({
@@ -640,6 +630,16 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             selector: '.jp-Notebook:focus',
             keys: ['E', 'B'],
             command: 'notebook:run-all-below'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt W'],
+            command: 'docmanager:save'
+        });
+        commands.addKeyBinding({
+            selector: 'body',
+            keys: ['Alt Q'],
+            command: 'application:close'
         });
         commands.addKeyBinding({
             selector: 'body',

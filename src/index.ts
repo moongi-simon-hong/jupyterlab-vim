@@ -636,14 +636,14 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             keys: ['W'],
             command: 'docmanager:save'
         });
+	//commands.addKeyBinding({
+        //    selector: 'body',
+        //    keys: ['Alt W'],
+        //    command: 'docmanager:save'
+        //});
         commands.addKeyBinding({
             selector: 'body',
-            keys: ['Alt W'],
-            command: 'docmanager:save'
-        });
-        commands.addKeyBinding({
-            selector: 'body',
-            keys: ['Alt Q'],
+            keys: ['Ctrl Q'],
             command: 'application:close'
         });
         commands.addKeyBinding({

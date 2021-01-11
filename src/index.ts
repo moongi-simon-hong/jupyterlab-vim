@@ -642,7 +642,7 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             command: 'docmanager:save'
         });
         commands.addKeyBinding({
-            selector: '.jp-Activity',
+            selector: 'body',
             keys: ['Alt Q'],
             command: 'application:close'
         });

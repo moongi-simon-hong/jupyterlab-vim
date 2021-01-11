@@ -632,12 +632,17 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
             command: 'notebook:run-all-below'
         });
         commands.addKeyBinding({
+            selector: '.jp-Notebook:focus',
+            keys: ['W'],
+            command: 'docmanager:save'
+        });
+        commands.addKeyBinding({
             selector: 'body',
             keys: ['Alt W'],
             command: 'docmanager:save'
         });
         commands.addKeyBinding({
-            selector: 'body',
+            selector: '.jp-Activity',
             keys: ['Alt Q'],
             command: 'application:close'
         });

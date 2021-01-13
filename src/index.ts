@@ -533,12 +533,12 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl J'],
+            keys: ['Ctrl E'],
             command: 'notebook:move-cell-down'
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl K'],
+            keys: ['Ctrl Y'],
             command: 'notebook:move-cell-up'
         });
         commands.addKeyBinding({
@@ -583,12 +583,12 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl Shift J'],
+            keys: ['V', 'J'],
             command: 'notebook:extend-marked-cells-bottom'
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl Shift K'],
+            keys: ['V', 'K'],
             command: 'notebook:extend-marked-cells-top'
         });
         commands.addKeyBinding({
@@ -603,7 +603,7 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['V'],
+            keys: ['V', 'V'],
             command: 'notebook:create-output-view'
         });
         commands.addKeyBinding({

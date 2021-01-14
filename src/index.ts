@@ -533,12 +533,12 @@ function activateCellVim(app: JupyterFrontEnd, tracker: INotebookTracker): Promi
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl E'],
+            keys: ['Ctrl J'],
             command: 'notebook:move-cell-down'
         });
         commands.addKeyBinding({
             selector: '.jp-Notebook:focus',
-            keys: ['Ctrl Y'],
+            keys: ['Ctrl K'],
             command: 'notebook:move-cell-up'
         });
         commands.addKeyBinding({
